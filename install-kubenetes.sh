@@ -47,7 +47,7 @@ yum-config-manager \
  --add-repo\
  http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 
-yum install -y docker-ce-{$DOCKER_VERSION} docker-ce-cli-{$DOCKER_VERSION} containerd.io
+yum install -y docker-ce-$DOCKER_VERSION docker-ce-cli-$DOCKER_VERSION containerd.io
 systemctl enable docker
 systemctl start docker
 
@@ -72,7 +72,7 @@ repo_gpgcheck=1
 gpgkey=https://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg https://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg
 EOF
 
-yum install -y kubelet-{$KUBERNETES_VERSION} kubeadm-{$KUBERNETES_VERSION} kubectl-{$KUBERNETES_VERSION}
+yum install -y kubelet-$KUBERNETES_VERSION kubeadm-$KUBERNETES_VERSION kubectl-$KUBERNETES_VERSION
 systemctl enable kubelet && systemctl start kubelet
 
 chmod 777 ./mast.sh
