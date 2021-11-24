@@ -1,6 +1,9 @@
 #!/bin/bash
-KUBERNETES_VERSION=1.17.3
+KUBERNETES_VERSION=1.20.13
 DOCKER_VERSION=19.03.8
+
+export KUBERNETES_VERSION
+export DOCKER_VERSION
 # 关闭防火墙
 systemctl stop firewalld
 systemctl disable firewalld
