@@ -12,9 +12,9 @@ chmod +x tools/*
 ## 初始化集群
 ```bash
 kubeadm init \
- --apiserver-advertise-address=172.26.248.150 \
+ --apiserver-advertise-address=172.16.16.249 \
  --image-repository=registry.cn-hangzhou.aliyuncs.com/google_containers \
- --kubernetes-version=v1.17.3 \
+ --kubernetes-version=v1.20.13 
 # --service-cidr=10.96.0.0/16 \
 # --pod-network-cidr=10.244.0.0/16
 ```
