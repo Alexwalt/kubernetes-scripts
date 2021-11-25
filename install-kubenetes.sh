@@ -80,3 +80,7 @@ systemctl enable kubelet && systemctl start kubelet
 
 chmod 777 ./mast.sh
 ./mast.sh 
+
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
