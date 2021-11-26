@@ -33,6 +33,8 @@ done
 
 sysctl -p
 
+yum install epel-release -y && yum install htop vim -y
+
 yum remove docker \
  docker-client \
  docker-client-latest \
